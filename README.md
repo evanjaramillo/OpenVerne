@@ -1,14 +1,16 @@
 # OpenVerne
 
+### This is a fork of the original repository that can be found [here](https://github.com/istellartech/OpenVerne).
+
 rocket (or missile) Instantaneous Impact Point(IIP) calculation
 
 The instantaneous impact point (IIP) of a rocket, given its position and velocity,
 is defined as its touchdown point(altitude=0[m]) assuming a free-fall flight (without propulsion).
 The IIP is considered as a very important information for safe launch operation of a rocket.
 
-ロケットの瞬間落下地点（IIP : Instantaneous Impact Point)を計算できるスクリプト
-緯度[deg]経度[deg]高度[m]と北方向速度[m/s]東方向速度[m/s]鉛直下方向速度[m/s]を入力すると
-IIPの座標が出力される。
+A script that can calculate the instantaneous impact point (IIP) of a rocket
+Enter latitude [deg] longitude [deg] altitude [m], north speed [m/s] east speed [m/s] and vertical downward speed [m/s]
+Coordinates of IIP are output.
 
 ## Usage
 see example(example_xx.py in this repository).
