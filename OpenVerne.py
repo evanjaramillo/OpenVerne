@@ -206,7 +206,7 @@ class IIP:
             lat_ECI_IIP_rad = deg2rad(IIP_LLH_deg[0])
             lon_ECI_IIP_rad = deg2rad(IIP_LLH_deg[1])
 
-            # print("phi = %3f [deg], lat IIP %.3f [deg]" % (rad2deg(phi),rad2deg(lat_ECI_IIP_rad)))
+            print("phi = %3f [deg], lat IIP %.3f [deg]" % (rad2deg(phi),rad2deg(lat_ECI_IIP_rad)))
             rp_new = wgs84.re_a * sqrt(1 - wgs84.e2 * sin(lat_ECI_IIP_rad)**2)
             return rp_temp - rp_new
 
@@ -219,7 +219,7 @@ class IIP:
             hantei_rp1 = rp_calc(rp1)  # 正か負かnan
             hantei_rp2 = rp_calc(rp2)  # 正か負かnan
             hantei_rpM = rp_calc(rpM)
-            # print("rpM = %.1f, 1:%.5f, 2:%.5f, M:%.5f" % (rpM, hantei_rp1, hantei_rp2, hantei_rpM))
+            print("rpM = %.1f, 1:%.5f, 2:%.5f, M:%.5f" % (rpM, hantei_rp1, hantei_rp2, hantei_rpM))
             if(hantei_rpM < 0):
                 rp1 = rpM
             else:
