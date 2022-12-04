@@ -30,7 +30,7 @@ The first argument is the position in the LLH coordinate system [deg, deg, m]
 
 The second argument is the speed in the NED coordinate system [m/s, m/s, m/s]
 
-## Refarence
+## References
 Jaemyung Ahn and Woong-Rae Roh.  "Noniterative Instantaneous Impact Point Prediction Algorithm for Launch Operations",
 Journal of Guidance, Control, and Dynamics, Vol. 35, No. 2 (2012), pp. 645-648.
 https://doi.org/10.2514/1.56395
