@@ -204,9 +204,9 @@ class IIP:
             self.ip = self.ip / np.linalg.norm(self.ip)
             IIP_LLH_deg = posLLH(self.ip * rp_temp)
             lat_ECI_IIP_rad = deg2rad(IIP_LLH_deg[0])
-            lon_ECI_IIP_rad = deg2rad(IIP_LLH_deg[1])
+            #lon_ECI_IIP_rad = deg2rad(IIP_LLH_deg[1])
 
-            print("phi = %3f [deg], lat IIP %.3f [deg]" % (rad2deg(phi),rad2deg(lat_ECI_IIP_rad)))
+            #print("phi = %3f [deg], lat IIP %.3f [deg]" % (rad2deg(phi),rad2deg(lat_ECI_IIP_rad)))
             rp_new = wgs84.re_a * sqrt(1 - wgs84.e2 * sin(lat_ECI_IIP_rad)**2)
             return rp_temp - rp_new
 
@@ -216,10 +216,10 @@ class IIP:
 
         while True:  # dichotomy
             rpM = (rp1 + rp2) / 2
-            hantei_rp1 = rp_calc(rp1)  # positive or negative nan
-            hantei_rp2 = rp_calc(rp2)  # positive or negative nan
+            #hantei_rp1 = rp_calc(rp1)  # positive or negative nan
+            #hantei_rp2 = rp_calc(rp2)  # positive or negative nan
             hantei_rpM = rp_calc(rpM)
-            print("rpM = %.1f, 1:%.5f, 2:%.5f, M:%.5f" % (rpM, hantei_rp1, hantei_rp2, hantei_rpM))
+           # print("rpM = %.1f, 1:%.5f, 2:%.5f, M:%.5f" % (rpM, hantei_rp1, hantei_rp2, hantei_rpM))
             if(hantei_rpM < 0):
                 rp1 = rpM
             else:
@@ -275,7 +275,13 @@ class IIP:
 
         # Earth surface distance from initial position to IIP
         self.distance_ECEF = earth_radius * arccos(sin(posLLH_init_rad[0])*sin(self.posLLH_IIP_rad[0]) + cos(posLLH_init_rad[0])*cos(self.posLLH_IIP_rad[0])*cos(self.posLLH_IIP_rad[1]-posLLH_init_rad[1]))
-
+    
+    def iip_result_lat(self):
+        return self.posLLH_IIP_deg[0]
+    
+    def iip_result_lon(self):
+        return self.posLLH_IIP_deg[1]
+    
     def __repr__(self):
         print("==== current point ====")
         print("lat = %.6f [deg], lon = %.6f [deg]" % (self.posLLH_[0], self.posLLH_[1]))
