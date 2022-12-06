@@ -1,12 +1,10 @@
-# OpenVerne
+# OpenVerne - Instantaneous Impact Point (IIP) Calculation
 
 ### This is a fork of the original repository that can be found [here](https://github.com/istellartech/OpenVerne).
 
-rocket (or missile) Instantaneous Impact Point(IIP) calculation
-
 The instantaneous impact point (IIP) of a rocket, given its position and velocity,
-is defined as its touchdown point(altitude=0[m]) assuming a free-fall flight (without propulsion).
-The IIP is considered as a very important information for safe launch operation of a rocket.
+is defined as its touchdown point assuming a free-fall flight without propulsion.
+The IIP is a very important metric to monitor during launch operations to ensure a safe flight.
 
 A script that can calculate the instantaneous impact point (IIP) of a rocket
 Enter latitude [deg] longitude [deg] altitude [m], north speed [m/s] east speed [m/s] and vertical downward speed [m/s]
@@ -40,8 +38,6 @@ https://doi.org/10.2514/1.A33424
 
 ## Conception of name
 [Jules Verne](https://en.wikipedia.org/wiki/Jules_Verne) ([From_the_Earth_to_the_Moon](https://en.wikipedia.org/wiki/From_the_Earth_to_the_Moon))
-
-
 
 
 ## License
